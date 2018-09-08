@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="app-build">
+        <router-view/>
     </div>
-    <router-view/>
+    
   </div>
 </template>
 <script>
+import '@/index/assets/style/global.css';
 const app = {
   name:'app'
 };
@@ -22,14 +22,5 @@ export default app;
 </script>
 >
 <style lang="less">
-@fontSize:16px;
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  font-size:@fontSize;
-}
+
 </style>
