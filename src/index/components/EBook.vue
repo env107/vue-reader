@@ -20,6 +20,7 @@
                 <div class="mask-right" @click="changePage('next')"></div>
             </div>
         </div>
+        <transition name="menu">
         <div class="ebook-menu" v-show="showMask">
             <div class="menu-item">
                 <span class="icon-align-left"></span>
@@ -32,9 +33,9 @@
             </div>
             <div class="menu-item">
                 <span class="icon-translate"></span>
-            </div>
-            
+            </div>    
         </div>
+        </transition>
     </div>
 </template>
 
@@ -155,4 +156,24 @@ export default {
             flex:1;
         }
     }
+    /* *-enter *-enter-to *-enrter-active  */
+    /* *-leave *-leave-to *-leave-active  */
+    .menu-enter,.menu-leave-to{
+        transform: 0 0 0;
+    }
+    .menu-enter-to{
+        background:red;
+    }
+
+    // .menu-enter-active {
+    //     transition: all .3s ease;
+    // }
+    // .menu-leave-active {
+    //     transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    // }
+    // .menu-enter, .menu-leave-to
+    // {
+    //     transform: translateX(10px);
+    //     opacity: 0;
+    // }
 </style>
